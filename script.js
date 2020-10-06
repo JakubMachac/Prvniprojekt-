@@ -12,18 +12,23 @@ function vypocet() {
 
     let vyp = "?";
     if (isNaN(c1)) {
-      alert("Neni zadano prvni cislo");
+      alert("Neni zadano prvni cislo.");
     } else if (isNaN(c2)) {
-      alert("Neni zadano druhe cislo");
-    }
-    else if (op == "plus") {
+      alert("Neni zadano druhe cislo.");
+      
+    } else if (op == "plus") {
       vyp = c1 + c2;
-    }
-    else if (op == "minus") {
+    } else if (op == "minus") {
       vyp = c1 - c2;
+    } else if (op == "krat") {
+      vyp = c1 * c2;
+    } else if (c2 === 0)  {
+     alert("Nelze delit nulou.")
+    } else if (op == "deleno") {
+      vyp = c1 / c2;
     }
   console.log(vyp);
   document.getElementById("vysledek").value = vyp ;
-  document.getElementById("vysledek").innerHTML = vyp ;
+  document.getElementById("vysledek2").innerHTML = "Výsledek je <b>" + vyp + "</b>."; 
   
 }
