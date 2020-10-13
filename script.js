@@ -23,10 +23,15 @@ function vypocet() {
     } else if (op == "krat") {
       vyp = c1 * c2;
     } else if (op == "deleno") {
-      if (c2 == 0)
+      if (c2 == 0) {
       alert("Nelze dělit nulou.")
-      else
+    }else {
       vyp = c1 / c2;
+      }
+    } 
+    if (!isNaN(vyp) && document.getElementById("zaokrouhlit").checked) {
+      let pm = document.getElementById("pocetmist").value;
+      vyp = vyp.toFixed(pm);
     }
   console.log(vyp);
   document.getElementById("vysledek").value = vyp ;
