@@ -22,9 +22,10 @@ function vypocet() {
       vyp = c1 - c2;
     } else if (op == "krat") {
       vyp = c1 * c2;
-    } else if (c2 === 0)  {
-     alert("Nelze delit nulou.")
     } else if (op == "deleno") {
+      if (c2 == 0)
+      alert("Nelze dělit nulou.")
+      else
       vyp = c1 / c2;
     }
   console.log(vyp);
